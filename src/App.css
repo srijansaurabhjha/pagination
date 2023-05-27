@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.product_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px;
+    gap: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.single_product{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    border-radius: 1rem;
+    background-color: lightblue;
+    cursor: pointer;
+    border: 1px solid teal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.single_product>p{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.single_product>img{
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination>span{
+    padding: 1rem;
+    border: 1px solid thistle;
+    cursor: pointer;
+}
+
+.pagination_selected{
+    background-color: rgba(211, 211, 211, 0.468);
+}
+
+.pagination_disabled{
+    display: none;
 }
